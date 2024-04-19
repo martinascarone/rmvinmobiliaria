@@ -74,13 +74,31 @@ nav {
 	gap: 25px;
     padding-top: 1%;
     padding-bottom: 1%;
+    padding: 1% 1%;
+    margin-bottom: 30px;
 }
 
-.destacadas-propiedad-01 {
+.destacadas-propiedad {
     background-color: white;
-    width: 300px;
-    height: 120px;
+    width: 100%;
+    height: 160px;
     margin: auto;
+    border-radius: 16px;
+}
+
+.destacadas-propiedad img {
+    border-radius: 16px;
+}
+
+.destacadas-propiedad-info {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 25px;
+}
+
+.destacadas-propiedad-info-02 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Filtros Section */
