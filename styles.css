@@ -53,6 +53,36 @@ nav {
    background-color: #5F5A5A;
 }
 
+/* Destacadas Section */
+
+.destacadas {
+    background-color: #1A1A1A;
+    opacity: 56%;
+    justify-content: space-around;
+}
+
+.destacadas-title {
+    color: white;
+    font-size: 30px;
+    margin-left: 2%;
+    padding-top: 1%;
+}
+
+.destacadas-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.destacadas-propiedad-01 {
+    background-color: white;
+    width: 300px;
+    height: 120px;
+    margin: auto;
+}
+
 /* Filtros Section */
 
 .filterSearch-header {
