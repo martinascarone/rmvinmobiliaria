@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    scrollbar-color: black white; /* ScrollBar de colores ;) */
 }
 
 /* Estilos que se repiten a lo largo de la pagina */
