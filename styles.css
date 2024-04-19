@@ -1,0 +1,55 @@
+/* Estilos que afectaran a toda la pagina */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos que se repiten a lo largo de la pagina */
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+/* Estilos mas puntuales */
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+}
+
+.header-we {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 120px;
+}
+
+nav {
+    display: inline-flex;
+    width: 300px;
+}
+
+.header-button {
+    border: #D9D9D9 solid 0px;
+    background-color: #D9D9D9;
+    height: 5vh;
+    margin-right: 10px;
+    width: 100%;
+    border-radius: 21px;
+    font-weight: 600;
+}
+
+.header-button:hover {
+   background-color: #5F5A5A;
+}
+
