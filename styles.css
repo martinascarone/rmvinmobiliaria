@@ -11,6 +11,17 @@
     font-style: normal;
 }
 
+.div-centrado-padre {
+    position: relative;
+}
+
+.div-centrado-hijo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Estilos mas puntuales */
 
 
@@ -100,6 +111,11 @@ nav {
 
 .destacadas-propiedad img {
     border-radius: 16px;
+    object-fit:fill;
+}
+
+.destacadas-propiedad p {
+    color: gray;
 }
 
 .destacadas-propiedad-info {
@@ -113,7 +129,8 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
-.destacadas-price {
+
+.destacadas-propiedad-button {
     background-color: #5F5A5A;
     border-radius: 5px;
     color: white;
@@ -230,3 +247,12 @@ nav {
 /*
     MARK: "Section" Footer
 */
+
+/*
+    MARK: "Section" Subpage propiedad
+*/
+
+.img-central {
+    width: 80%;
+    height: 60%;
+}
