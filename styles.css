@@ -13,7 +13,10 @@
 
 /* Estilos mas puntuales */
 
-/* Header */
+
+/*
+    MARK: "Section" Header
+*/
 
 .header {
     display: flex;
@@ -53,12 +56,21 @@ nav {
    background-color: #5F5A5A;
 }
 
-/* Destacadas Section */
+/*
+    MARK: "Section" Welcome
+*/
+
+
+
+/*
+    MARK: "Section" Destacadas
+*/
 
 .destacadas {
-    background-color: #1A1A1A;
-    opacity: 56%;
+    background-color: #1a1a1a79;
     justify-content: space-around;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 .destacadas-title {
@@ -101,7 +113,15 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
-/* Filtros Section */
+.destacadas-price {
+    background-color: #5F5A5A;
+    border-radius: 5px;
+    color: white;
+}
+
+/*
+    MARK: "Section" Filtros
+*/
 
 .filterSearch-header {
     display: flex;
@@ -206,3 +226,7 @@ nav {
 .text p {
     margin-bottom: 20px; 
 }
+
+/*
+    MARK: "Section" Footer
+*/
