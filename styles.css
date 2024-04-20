@@ -73,6 +73,8 @@ nav {
 
 
 
+
+
 /*
     MARK: "Section" Destacadas
 */
@@ -248,11 +250,17 @@ nav {
     MARK: "Section" Footer
 */
 
+
+
+
+
 /*
     MARK: "Section" Subpage propiedad
 */
 
 .img-central {
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    margin-left: 4vh;
+    height: 75%;
+    border-radius: 20px;
 }
