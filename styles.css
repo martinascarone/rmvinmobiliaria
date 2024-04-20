@@ -100,6 +100,11 @@ nav {
 
 .destacadas-propiedad img {
     border-radius: 16px;
+    object-fit:fill;
+}
+
+.destacadas-propiedad p {
+    color: gray;
 }
 
 .destacadas-propiedad-info {
@@ -113,7 +118,8 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
-.destacadas-price {
+
+.destacadas-propiedad-button {
     background-color: #5F5A5A;
     border-radius: 5px;
     color: white;
