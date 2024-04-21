@@ -37,7 +37,24 @@
 
     <!-- MARK: Welcome Section => Martu
      -->
-     <img src="/img_dePrueba_BorrarAlFinal/WelcomeSection.png" alt="" style="width: 100%;">
+     <!-- <img src="/img_dePrueba_BorrarAlFinal/WelcomeSection.png" alt="" style="width: 100%;"> -->
+     <div class="banner-box"> 
+        <div class="banner-search-box">  
+            <form id="search-form" class="montserrat" style="font-weight: 500;" >
+                <div class="form-field"></div>
+                    <label for="location">Locación</label>
+                    <input type="text" id="location" name="location" placeholder="Locación" />
+                    <label for="location">Tipo de propiedad</label>
+                    <input type="text" id="property-type" name="property-type" placeholder="Tipo de propiedad" />
+
+                <!-- boton de busqueda-->
+                <button id="button-search-filter" class="button-search">
+                    <img id="button-search-img" style="width: 100%;" src="/img/boton buscar.png" alt="">
+                </button>
+            </form>
+
+        </div>
+     </div>
 
      <!-- MARK: Destacadas => Martu
     -->
@@ -151,11 +168,30 @@
 
     </div>
 
-    <!-- MARK: Footer => Valu 
+    <!-- MARK: Contact => Martu
     -->
-    <footer>
-        <img src="/img_dePrueba_BorrarAlFinal/Foot.png" alt="" style="width: 100%;">
-    </footer>
+    <div class="contact-form">
+        <form id="contact-form-section" class="box-form">
+            <!-- Campo de nombre -->
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre">
+    
+            <!-- Campo de email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu email">
+    
+            <!-- Campo de teléfono -->
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono">
+    
+            <!-- Campo de propiedad -->
+            <label for="property">Propiedad</label>
+            <input type="text" id="property" name="property" placeholder="Tipo de propiedad">
+    
+            <!-- Botón de envío -->
+            <button type="submit" class="header-button" style="width: 100px;margin-top: 20px">Enviar</button>
+        </form>
+    </div>
+    <img src="/img_dePrueba_BorrarAlFinal/form.png" alt="" style="width: 100%;">
 
-</body>
-</html>
+   
