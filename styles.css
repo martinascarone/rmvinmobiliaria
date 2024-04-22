@@ -151,7 +151,7 @@ nav {
 */
 
 .destacadas {
-    background-color: #1a1a1a79;
+    background-color: #1a1a1a65;
     justify-content: space-around;
     padding-bottom: 1%;
     margin-bottom: 2%;
@@ -365,7 +365,6 @@ nav {
 .box-form {
     font-family: 'Montserrat', sans-serif; 
     font-size: 20px; 
-    line-height: 160.5%; 
     color: #000000; 
     background-color: rgba(255, 255, 255, 0.3); 
     border-radius: 28px; 
@@ -375,8 +374,8 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column; 
-    margin-left: auto; /* Empuja el cuadro hacia la derecha */
-    margin-right: 110px; /* Margen a la derecha */
+    margin-left: auto; 
+    margin-right: 110px; 
 }
 
 .box-form input[type="text"],
@@ -412,4 +411,21 @@ table {
 }
 .letra{
     font-size: 10px;
+}
+
+.form-text p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #1F1F1F;
+    line-height: 1.2;
+    margin-left: 50px;
+}
+
+.form-text p {
+    font-family: 'Montserrat', sans-serif; 
+    color: #1F1F1F;
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 15px;
 }
