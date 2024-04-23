@@ -447,3 +447,8 @@ table {
     font-size: 20px;
     margin-top: 15px;
 }
+
+.pie {
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
