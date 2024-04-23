@@ -440,15 +440,55 @@ table {
     margin-left: 50px;
 }
 
-.form-text p {
-    font-family: 'Montserrat', sans-serif; 
-    color: #1F1F1F;
-    margin-left: 50px;
+/* footer */
+
+.text-footer {
+    color: white;
     font-size: 20px;
-    margin-top: 15px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+.text-footer p {
+    margin-bottom: 20px; 
 }
 
-.pie {
-    font-family: 'roboto', sans-serif;
+table { 
+    display: flex;
+    border: #515776 ;
+    width: 100%;
+    background-color: #515776;
+    height: 100%;
+    margin-top: 20px;
+  
+}
+.centrado-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border: 0;
+    padding-right: 415px;
+}
+.texto-blanco {
+    color:white;
+    font-size: 12px;
+
+
+}
+
+.letra{
+    border: 0;
+}
+
+td.Cajita1{
+    border: 0;
+}
+
+p.texto-blanco-arial{
+    font-size: 10px;
     color: white;
+    margin-left: 80%;
 }
