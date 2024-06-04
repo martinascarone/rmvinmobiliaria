@@ -87,7 +87,7 @@ nav {
 */
 /* Banner section */
 .banner-box {
-    background-image: url(/img/banner2.jpg);
+    background-image: url(img/banner2.jpg);
     width: 100%;
     height: 700px;
     background-size: cover;
@@ -365,7 +365,7 @@ nav {
 /* form section */
 
 .contact-form {
-    background-image: url(/img/form-bulding.jpg);
+    background-image: url(img/form-bulding.jpg);
     width: 90%;
     height: 500px;
     background-size: cover;
