@@ -1,0 +1,48 @@
+/*
+    MARK: "Section" Header
+*/
+
+.header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+    background-color: white;
+    height: 15vh;
+}
+
+.header-we {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 120px;
+}
+
+nav {
+    display: inline-flex;
+    width: 300px;
+}
+
+.header-button {
+    border: #D9D9D9 solid 0px;
+    background-color: #D9D9D9;
+    height: 5vh;
+    margin-right: 10px;
+    width: 100%;
+    border-radius: 21px;
+    font-weight: 600;
+}
+
+.header-button:hover {
+   background-color: #5F5A5A;
+}
