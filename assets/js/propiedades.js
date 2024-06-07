@@ -136,6 +136,12 @@ function printPropiedades(propiedades) {
     var publicaionesHTML = "";
     for (var i = 0; i < propiedades.length; i++) {
         var propiedad = propiedades[i];
+        publicaionesHTML += '<a href="./assets/subpages/publicacionGenerica.html?id=' + propiedad.id + 
+                    '&nombre=' + encodeURIComponent(propiedad.nombre) + 
+                    '&ubicacion=' + encodeURIComponent(propiedad.ubicacion) + 
+                    '&mt2=' + encodeURIComponent(propiedad.mt2) + 
+                    '&descripcion=' + encodeURIComponent(propiedad.descripcion) + 
+                    '&tipo=' + encodeURIComponent(propiedad.tipo) + '">';
         publicaionesHTML += '<div id="' + propiedad.id + '" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-' + propiedad.id + '.jpg);">';
         publicaionesHTML += '<div class="overlay">';
         publicaionesHTML += '<div class="text">';
@@ -145,7 +151,8 @@ function printPropiedades(propiedades) {
         publicaionesHTML += '<p>' + propiedad.descripcion + '</p>'
         publicaionesHTML += '</div>';
         publicaionesHTML += '</div>';
-        publicaionesHTML += '</div>'
+        publicaionesHTML += '</div>';
+        publicaionesHTML += '</a>';
     }
     return publicaionesHTML;
 }
