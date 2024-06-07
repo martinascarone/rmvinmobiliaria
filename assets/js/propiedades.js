@@ -174,7 +174,7 @@ document.getElementById('filter-form').addEventListener('submit', function(event
 
     // Mostrar o ocultar el mensaje de "No hay coincidencias"
     if (propiedadesFiltradas.length === 0) {
-        document.getElementById('mensaje-no-coincidencias').style.display = 'block';
+        document.getElementById('mensaje-no-coincidencias').style.display = 'flex';
     } else {
         document.getElementById('mensaje-no-coincidencias').style.display = 'none';
     }
@@ -182,3 +182,4 @@ document.getElementById('filter-form').addEventListener('submit', function(event
     // Llama a la función para imprimir las propiedades filtradas o el mensaje de "No hay coincidencias"
     document.getElementById("propiedades").innerHTML = propiedadesFiltradas.length > 0 ? printPropiedades(propiedadesFiltradas) : '';
 });
+    
