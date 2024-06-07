@@ -172,6 +172,13 @@ document.getElementById('filter-form').addEventListener('submit', function(event
         return true; // La propiedad pasa ambos filtros
     });
 
-    // Llama a la función para imprimir las propiedades filtradas
-    document.getElementById("propiedades").innerHTML = printPropiedades(propiedadesFiltradas);
+    // Mostrar o ocultar el mensaje de "No hay coincidencias"
+    if (propiedadesFiltradas.length === 0) {
+        document.getElementById('mensaje-no-coincidencias').style.display = 'block';
+    } else {
+        document.getElementById('mensaje-no-coincidencias').style.display = 'none';
+    }
+
+    // Llama a la función para imprimir las propiedades filtradas o el mensaje de "No hay coincidencias"
+    document.getElementById("propiedades").innerHTML = propiedadesFiltradas.length > 0 ? printPropiedades(propiedadesFiltradas) : '';
 });
