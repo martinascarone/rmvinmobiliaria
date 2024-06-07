@@ -12,7 +12,7 @@ function myFunction(cajita, propiedad ) {
     }
   };
 
-function girarTriangulo(idMenu) {
+function mostrarMenu(idMenu) {
     var menu = document.getElementById(idMenu);
 
     if (menu.style.display === "none") {
