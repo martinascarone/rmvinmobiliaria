@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad</title>
+    <!--JS-->
+    <script src="/assets/js/script.js"></script>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/layout/header.css">   
+    <link rel="stylesheet" href="/assets/css/layout/noConcidencias.css"> 
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Icono del navegador -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-we">
+        <a href="/index.html"><img class="header-logo" src="/assets/img/Logo_enNegro_sinFondo.png" alt="Logo"></a>
+        <p class="header-slogan montserrat">Hacemos de sueños realidades</p>
+        </div>
+
+        <nav>
+            <button class="header-button montserrat" style="text-decoration: underline black;"><a href="/assets/subpages/propiedadesFiltro.html">Propiedades</a></button>
+            <button class="header-button montserrat"> <a href="/index.html#contact-form-section"> Contacto </a></button>
+        </nav>
+
+    </header>
+
+    <div style="height: 15vh;"></div>
+
+    <div class="filterSearch" style = "margin-top:20px;">
+
+        <div class="filterSearch-header">
+            
+            <h3 class="filterSearch-header-title montserrat" style = "margin-top:10px;">Propiedades:</h3>
+
+            <div id="ac">
+                <label class="montserrat filterSearch-header-filtros" for="filterSearch-header-boton">Filtros</label>
+                <button id="filterSearch-header-boton" onclick="mostrarMenu('caja-filtros')" class="filterSearch-header-button">
+                    <img id="filterSearch-header-img" style="width: 100%;" src="/assets/img/panel-de-control.png" alt="">
+                </button>
+            </div>
+
+        </div>
+
+        <div class="filterSearch-box" id="caja-filtros" style="display: none;">
+            <form id="filter-form">
+
+            <label for="select-tipo">Tipo de propiedad:</label>
+            <select id="select-tipo" name="select-tipo">
+                <option value="Todos"></option>
+                <option value="casa">Casa</option>
+                <option value="departamento">Departamento</option>
+                <option value="garage">Garage</option>
+                <option value="varios">Varios</option>
+            </select>
+
+            <label for="select-barrio">Elige el Barrio:</label>
+            <select id="select-barrio" name="select-barrio">
+                <option value="Todos"></option>
+                <option value="La Boca">La Boca</option>
+                <option value="Caballito">Caballito</option>
+                <option value="Palermo">Palermo</option>
+                <option value="Congreso">Congreso</option>
+            </select>
+            
+            <fieldset style="display: inline;">
+                <input type="radio" id="alquilerYcompra" name="modo" value="alquilerYcompra"><label for="alquilerYcompra">Alquiler y compra</label>
+                <input type="radio" id="alquiler" name="modo" value="alquiler"><label for="alquiler">Alquiler</label>
+                <input type="radio" id="compra" name="modo" value="compra"><label for="compra">Compra</label>
+            </fieldset>
+
+            <button type="submit">
+                <img id="button-search-img" style="width: 100%;" src="/assets/img/boton buscar.png" alt="">
+            </button>
+
+            </form>
+            
+        </div>
+
+        <div id="propiedades" class="publicacion-contenedor" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+            <script type="module" src="/assets/js/propiedades.js"></script>
+        </div>
+
+        <div id="mensaje-no-coincidencias" style="display: none;">
+            <p>No hay coincidencias con esos criterios de búsqueda.</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
