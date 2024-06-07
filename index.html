@@ -183,19 +183,38 @@
         </div>
 
         <div class="filterSearch-box" id="caja-filtros" style="display: none;">
+            <form id="filter-form">
+
+            <label for="select-tipo">Tipo de propiedad:</label>
+            <select id="select-tipo" name="select-tipo">
+                <option value="Todos"></option>
+                <option value="Casa">Casa</option>
+                <option value="Departamento">Departamento</option>
+                <option value="Garage">Garage</option>
+                <option value="Varios">Varios</option>
+            </select>
+
             <label for="select-barrio">Elige el Barrio:</label>
-            <select id="select-barrio">
+            <select id="select-barrio" name="select-barrio">
+                <option value="Todos"></option>
                 <option value="La Boca">La Boca</option>
                 <option value="Caballito">Caballito</option>
                 <option value="Palermo">Palermo</option>
                 <option value="Congreso">Congreso</option>
             </select>
-            <input type="checkbox" id="myCheck-01" onclick="myFunction('myCheck-01', '01')"><label for="myCheck-01">Propiedad 1</label>
-            <input type="checkbox" id="myCheck-02" onclick="myFunction('myCheck-02', '02')"><label for="myCheck-02">Propiedad 2</label>
-            <input type="checkbox" id="myCheck-03" onclick="myFunction('myCheck-03', '03')"><label for="myCheck-03">Propiedad 3</label>
-            <input type="checkbox" id="myCheck-04" onclick="myFunction('myCheck-04', '04')"><label for="myCheck-04">Propiedad 4</label>
-            <input type="checkbox" id="myCheck-05" onclick="myFunction('myCheck-05', '05')"><label for="myCheck-05">Propiedad 5</label>
-            <input type="checkbox" id="myCheck-06" onclick="myFunction('myCheck-06', '06')"><label for="myCheck-06">Propiedad 6</label>
+            
+            <fieldset style="display: inline;">
+                <input type="radio" id="alquilerYcompra" name="modo"><label for="alquilerYcompra">Alquiler y compra</label>
+                <input type="radio" id="alquiler" name="modo"><label for="alquiler">Alquiler</label>
+                <input type="radio" id="compra" name="modo"><label for="compra">Compra</label>
+            </fieldset>
+
+            <button type="submit">
+                <img id="button-search-img" style="width: 100%;" src="./assets/img/boton buscar.png" alt="">
+            </button>
+
+            </form>
+            
         </div>
 
         <div id="propiedades" class="publicacion-contenedor">
@@ -232,8 +251,6 @@
             <button type="submit" class="header-button" style="width: 100px;margin-top: 20px">Enviar</button>
         </form>
     </div>
-    <img src="./assets/img_dePrueba_BorrarAlFinal/form.png" alt="" style="width: 100%;">
-
 
     <!-- MARK: Footer -->
     <footer style="background-color: #333661; height: 15vh; width: 100%; display: flex; justify-content: space-between;">

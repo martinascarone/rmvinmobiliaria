@@ -67,3 +67,12 @@ function printPropiedades(propiedades) {
     return publicaionesHTML;
 }
 document.getElementById("propiedades").innerHTML = printPropiedades(propiedades)
+
+document.getElementById('filter-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const tipoFilter = document.getElementById('select-tipo').value;
+    const barrioFilter = document.getElementById('select-barrio').value;
+    alert(barrioFilter)
+
+})
