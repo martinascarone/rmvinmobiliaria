@@ -2,61 +2,141 @@ var propiedades = [
     {
         "id":1,
         "nombre":"Casa en la Playa",
-        "ubicacion":"Miramar",
         "precio":"Money",
         "mt2":85,
         "descripcion":"Playa privada con vistas al oceano",
-        "tipo": "Casa"
+        "tipo": "casa",
+        "modo": "alquilerYcompra",
+        "ubicacion": "Caballito"
     },
     {
         "id":2,
         "nombre":"Penthouse",
-        "ubicacion":"Palermo",
         "precio":"Money",
         "mt2":50,
         "descripcion":"Encima del edificio mas alto de CABA",
-        "tipo": "Departamento"
+        "tipo": "departamento",
+        "modo": "compra",
+        "ubicacion": "Palermo"
     },
     {
         "id":3,
         "nombre":"Casa con cancha",
-        "ubicacion":"Caballito",
         "precio":"Money",
         "mt2":100,
         "descripcion":"Casa con cancha de Footsal privada",
-        "tipo": "Casa"
+        "tipo": "casa",
+        "modo": "alquiler",
+        "ubicacion": "Caballito"
     },
     {
         "id":4,
         "nombre":"Resort",
-        "ubicacion":"Bariloche",
         "precio":"Money",
         "mt2":85,
-        "descripcion":"Perfecto para vacacionar"
+        "descripcion":"Perfecto para vacacionar",
+        "tipo": "varios",
+        "modo": "alquiler",
+        "ubicacion": "Palermo"
     },
     {
         "id":5,
-        "nombre":"Masion en Miami",
-        "ubicacion":"Miami",
+        "nombre":"Mansion en Miami",
         "precio":"Money",
         "mt2":200,
-        "descripcion":"Propiedad en el exterior muy exclusiva"
+        "descripcion":"Propiedad en el exterior muy exclusiva",
+        "tipo": "varios",
+        "modo": "compra",
+        "ubicacion": "Caballito"
     },
     {
         "id":6,
-        "nombre":"Edificio de apartamentos",
-        "ubicacion":"Centro",
+        "nombre":"Casa en el Bosque",
         "precio":"Money",
-        "mt2":60,
-        "descripcion":"En venta por departamento"
+        "mt2":120,
+        "descripcion":"Rodeada de naturaleza",
+        "tipo": "casa",
+        "modo": "alquiler",
+        "ubicacion": "Caballito"
     },
+    {
+        "id":7,
+        "nombre":"Departamento en la Playa",
+        "precio":"Money",
+        "mt2":70,
+        "descripcion":"Vistas al mar",
+        "tipo": "departamento",
+        "modo": "alquilerYcompra",
+        "ubicacion": "Caballito"
+    },
+    {
+        "id":8,
+        "nombre":"Casa en el Lago",
+        "precio":"Money",
+        "mt2":150,
+        "descripcion":"Frente al lago Nahuel Huapi",
+        "tipo": "casa",
+        "modo": "compra",
+        "ubicacion": "Caballito"
+    },
+    {
+        "id":9,
+        "nombre":"Loft en el Centro",
+        "precio":"Money",
+        "mt2":45,
+        "descripcion":"Estilo moderno",
+        "tipo": "departamento",
+        "modo": "alquiler",
+        "ubicacion": "Palermo"
+    },
+    {
+        "id":10,
+        "nombre":"Cabaña en la Montaña",
+        "precio":"Money",
+        "mt2":80,
+        "descripcion":"Para los amantes de la naturaleza",
+        "tipo": "casa",
+        "modo": "compra",
+        "ubicacion": "Caballito"
+    },
+    {
+        "id":11,
+        "nombre":"PH en Barrio Privado",
+        "precio":"Money",
+        "mt2":95,
+        "descripcion":"Seguridad y comodidad",
+        "tipo": "departamento",
+        "modo": "compra",
+        "ubicacion": "Palermo"
+    },
+    {
+        "id":12,
+        "nombre":"Apartamento cerca del Congreso",
+        "precio":"Money",
+        "mt2":70,
+        "descripcion":"Excelente ubicación cerca del Congreso",
+        "tipo": "departamento",
+        "modo": "alquilerYcompra",
+        "ubicacion": "Congreso"
+    },
+    {
+        "id":13,
+        "nombre":"Casa en La Boca",
+        "precio":"Money",
+        "mt2":120,
+        "descripcion":"Encantadora casa en el barrio de La Boca",
+        "tipo": "casa",
+        "modo": "compra",
+        "ubicacion": "La Boca"
+    }
 ];
+
 
 function printPropiedades(propiedades) {
     var publicaionesHTML = "";
     for (var i = 0; i < propiedades.length; i++) {
         var propiedad = propiedades[i];
-        publicaionesHTML += '<div id="0' + propiedad.id + '" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-0' + propiedad.id + '.jpg);">';
+        publicaionesHTML += '<div id="' + propiedad.id + '" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-' + propiedad.id + '.jpg);">';
         publicaionesHTML += '<div class="overlay">';
         publicaionesHTML += '<div class="text">';
         publicaionesHTML += '<p>' + propiedad.nombre + '</p>'
