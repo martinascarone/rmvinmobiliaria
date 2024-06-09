@@ -1,0 +1,44 @@
+.filterSearch-box {
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterSearch-box select {
+    margin-right: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.filterSearch-box label {
+    margin-right: 10px;
+    color: #000;
+}
+
+.filterSearch-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#button-search-img-2 {
+    width: 30px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 40%; 
+}
+
+.filterSearch-box input[type="radio"] {
+    margin-right: 10px;
+}
+
+.filterSearch-box input[type="radio"] + label {
+    margin-right: 20px; 
+}
+
