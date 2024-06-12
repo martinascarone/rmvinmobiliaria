@@ -19,6 +19,8 @@
 
     <!-- "Linkeamos" el html con el archivo javascript -->
     <script src="assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Google Fonts Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +109,7 @@
 
                 <div style="width: 70%; display: flex; flex-direction: column;">
 
-                    <h2 class="montserrat" style="flex-grow: 1;">"La Mansion" - Antezana 247</h2>
+                    <h2 class="montserrat" style="flex-grow: 1;">La Mansion - Antezana 247</h2>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info">
                         <p>6 cuartos</p>
@@ -317,6 +319,23 @@
 
 
     </footer>
+    <script>
+      $(document).ready(function(){
+        $('#contact-form-section').submit(function(event) {
+            event.preventDefault();
+            alert("Tu mensaje ha sido enviado, estaremos comunicandonos.")
+        });
+        //animación propiedades
+        $('.destacadas-propiedad').hover(
+            function() {
+                $(this).find('div:first-child').css('transform', 'scale(1.1)')
+            },
+            function() { // función que se ejecuta cuando el cursor sale del elemento
+            $(this).find('div:first-child').css('transform', 'scale(1)');
+        }
+        );
+      });  
 
+    </script>
 </body>
 </html>
