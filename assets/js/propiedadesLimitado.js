@@ -129,12 +129,11 @@ var propiedades = [
         "modo": "compra",
         "ubicacion": "La Boca"
     }
-];
+];  
 
-
-function printPropiedades(propiedades) {
+function printPropiedades(propiedades, cantidad) {
     var publicaionesHTML = "";
-    for (var i = 0; i < propiedades.length; i++) {
+    for (var i = 0; i < cantidad && i < propiedades.length; i++) {
         var propiedad = propiedades[i];
         publicaionesHTML += '<a href="/assets/subpages/publicacionGenerica.html?id=' + propiedad.id + 
                     '&nombre=' + encodeURIComponent(propiedad.nombre) + 
@@ -157,8 +156,8 @@ function printPropiedades(propiedades) {
     return publicaionesHTML;
 }
 
-// Llama a la función para imprimir todas las propiedades al cargar la página
-document.getElementById("propiedades").innerHTML = printPropiedades(propiedades);
+// Llama a la función para imprimir las primeras 6 propiedades al cargar la página
+document.getElementById("propiedades").innerHTML = printPropiedades(propiedades, 6);
 
 document.getElementById('filter-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe y la página se recargue
@@ -186,7 +185,6 @@ document.getElementById('filter-form').addEventListener('submit', function(event
         document.getElementById('mensaje-no-coincidencias').style.display = 'none';
     }
 
-    // Llama a la función para imprimir las propiedades filtradas o el mensaje de "No hay coincidencias"
-    document.getElementById("propiedades").innerHTML = propiedadesFiltradas.length > 0 ? printPropiedades(propiedadesFiltradas) : '';
+    // Llama a la función para imprimir las primeras 6 propiedades filtradas o el mensaje de "No hay coincidencias"
+    document.getElementById("propiedades").innerHTML = printPropiedades(propiedadesFiltradas, 6);
 });
-    

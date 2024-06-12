@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./assets/css/layout/header.css">
     <link rel="stylesheet" href="./assets/css/layout/banner.css">
     <link rel="stylesheet" href="./assets/css/layout/destacadas.css">
+    <link rel="stylesheet" href="/assets/css/layout/noConcidencias.css">
+    <link rel="stylesheet" href="/assets/css/layout/filter-box.css">
 
 
     <!-- "Linkeamos" el html con el archivo javascript -->
@@ -24,14 +26,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Icono del navegador -->
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
 
 </head>
 
 
 <body>
-    <!-- MARK: Header => Roman
-     -->
+    <!-- MARK: Header -->
      <header class="header">
 
         <div class="header-we">
@@ -40,7 +42,7 @@
         </div>
 
         <nav>
-            <button class="header-button montserrat"><a href="../assets/subpages/ejemplopublicacion.html">Propiedades</a></button>
+            <button class="header-button montserrat"><a href="/assets/subpages/propiedadesFiltro.html">Propiedades</a></button>
             <button class="header-button montserrat">
                  <a href="#contact-form-section">Contacto</a>
             </button>
@@ -49,8 +51,7 @@
      </header>
 
 
-    <!-- MARK: Welcome Section => Martu
-     -->
+    <!-- MARK: Welcome Section -->
      <div class="banner-box"> 
         <div class="banner-search-box"> 
             <div class ="rent-buy-selector">
@@ -88,8 +89,7 @@
         </div>
      </div>
 
-     <!-- MARK: Destacadas => Martu
-    -->
+    <!-- MARK: Destacadas -->
 
     <div class="destacadas">
 
@@ -205,8 +205,7 @@
     </div>
 
 
-    <!-- MARK: Filter/General view => Valu 
-    -->
+    <!-- MARK: Filter/General view -->
 
     <div class="filterSearch" style = "margin-top:20px;">
 
@@ -216,7 +215,7 @@
 
             <div id="ac">
                 <label class="montserrat filterSearch-header-filtros" for="filterSearch-header-boton">Filtros</label>
-                <button id="filterSearch-header-boton" onclick="girarTriangulo('caja-filtros')" class="filterSearch-header-button">
+                <button id="filterSearch-header-boton" onclick="mostrarMenu('caja-filtros')" class="filterSearch-header-button">
                     <img id="filterSearch-header-img" style="width: 100%;" src="./assets/img/panel-de-control.png" alt="">
                 </button>
             </div>
@@ -224,96 +223,51 @@
         </div>
 
         <div class="filterSearch-box" id="caja-filtros" style="display: none;">
+            <form id="filter-form">
+
+            <label for="select-tipo">Tipo de propiedad:</label>
+            <select id="select-tipo" name="select-tipo">
+                <option value="Todos"></option>
+                <option value="casa">Casa</option>
+                <option value="departamento">Departamento</option>
+                <option value="garage">Garage</option>
+                <option value="varios">Varios</option>
+            </select>
+
             <label for="select-barrio">Elige el Barrio:</label>
-            <select id="select-barrio">
+            <select id="select-barrio" name="select-barrio">
+                <option value="Todos"></option>
                 <option value="La Boca">La Boca</option>
                 <option value="Caballito">Caballito</option>
                 <option value="Palermo">Palermo</option>
                 <option value="Congreso">Congreso</option>
             </select>
-            <input type="checkbox" id="myCheck-01" onclick="myFunction('myCheck-01', '01')"><label for="myCheck-01">Propiedad 1</label>
-            <input type="checkbox" id="myCheck-02" onclick="myFunction('myCheck-02', '02')"><label for="myCheck-02">Propiedad 2</label>
-            <input type="checkbox" id="myCheck-03" onclick="myFunction('myCheck-03', '03')"><label for="myCheck-03">Propiedad 3</label>
-            <input type="checkbox" id="myCheck-04" onclick="myFunction('myCheck-04', '04')"><label for="myCheck-04">Propiedad 4</label>
-            <input type="checkbox" id="myCheck-05" onclick="myFunction('myCheck-05', '05')"><label for="myCheck-05">Propiedad 5</label>
-            <input type="checkbox" id="myCheck-06" onclick="myFunction('myCheck-06', '06')"><label for="myCheck-06">Propiedad 6</label>
+            
+            <fieldset style="display: inline;">
+                <input type="radio" id="alquilerYcompra" name="modo" value="alquilerYcompra"><label for="alquilerYcompra">Alquiler y compra</label>
+                <input type="radio" id="alquiler" name="modo" value="alquiler"><label for="alquiler">Alquiler</label>
+                <input type="radio" id="compra" name="modo" value="compra"><label for="compra">Compra</label>
+            </fieldset>
+
+            <button type="submit">
+                <img id="button-search-img-2" style="width: 100%;" src="./assets/img/boton buscar.png" alt="">
+            </button>
+
+            </form>
+            
         </div>
 
-        <div class="publicacion-contenedor" >
-
-            <div id="01" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-01.jpg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Casa en la playa</p>
-                        <p>Ubicacion: Miramar</p>
-                        <p>85mt2</p>
-                        <p>Playa privada con vistas al oceano</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="02" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-02.jpg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Penthouse</p>
-                        <p>Ubicacion: Palermo</p>
-                        <p>50mt2</p>
-                        <p>Encima del edificio mas alto de CABA</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="03" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-03.jpg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Casa con cancha</p>
-                        <p>Ubicacion: Caballito</p>
-                        <p>100mt2</p>
-                        <p>Casa con cancha de Footsal privada</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="04" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-04.jpg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Resort</p>
-                        <p>Ubicacion: Bariloche</p>
-                        <p>85mt2</p>
-                        <p>Perfecto para vacacionar</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="05" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-05.jpg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Mansion en Miami</p>
-                        <p>Ubicacion: Miami</p>
-                        <p>200mt2</p>
-                        <p>Propiedad en el exterior muy exclusiva</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="06" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-06.jpeg);">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Edificio de departamentos</p>
-                        <p>Ubicacion: Centro</p>
-                        <p>60mt2 por depto</p>
-                        <p>En venta por departamento</p>
-                    </div>
-                </div>
-            </div>
-
+        <div id="propiedades" class="publicacion-contenedor">
+            <script type="module" src="/assets/js/propiedadesLimitado.js"></script>
         </div>
 
+        <div id="mensaje-no-coincidencias" style="display: none;">
+            <p>No hay coincidencias con esos criterios de búsqueda.</p>
+        </div>
 
     </div>
 
-    <!-- MARK: Contact => Martu
-    -->
+    <!-- MARK: Contact -->
     <div class="contact-form">
         <div class = "form-text">
             <p> Encuentre su mejor lugar </p> 
@@ -340,11 +294,8 @@
             <button type="submit" class="header-button" style="width: 100px;margin-top: 20px">Enviar</button>
         </form>
     </div>
-    <img src="./assets/img_dePrueba_BorrarAlFinal/form.png" alt="" style="width: 100%;">
 
-
-    <!-- MARK: Footer => Valu 
-    -->
+    <!-- MARK: Footer -->
     <footer style="background-color: #333661; height: 15vh; width: 100%; display: flex; justify-content: space-between;">
         <div style="display: flex; align-items: center;">
             <img style="height: 100px;" src="./assets/img/Logo_enBlanco_sinFondo.png" alt="">
@@ -365,9 +316,6 @@
 
 
     </footer>
-
-    <div id="propiedades" class="publicacion-contenedor"></div>
-    <script type="module" src="../assets/js/propiedades.js"></script>
 
 </body>
 </html>

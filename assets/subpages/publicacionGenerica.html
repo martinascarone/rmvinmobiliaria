@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/layout/header.css">    
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Icono del navegador -->
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-we">
+        <a href="/index.html"><img class="header-logo" src="../img/Logo_enNegro_sinFondo.png" alt="Logo"></a>
+        <p class="header-slogan montserrat">Hacemos de sueños realidades</p>
+        </div>
+
+        <nav>
+            <button class="header-button montserrat" style="text-decoration: underline black;"><a href="/assets/subpages/propiedadesFiltro.html">Propiedades</a></button>
+            <button class="header-button montserrat"> <a href="../index.html#contact-form-section"> Contacto </a></button>
+        </nav>
+
+    </header>
+
+    <div style="display: flex;">
+
+        <div class="div-centrado-padre" style="width: 50%; height: 100vh;">
+            <!-- Aquí agregamos el elemento img -->
+            <img id="imagen-propiedad" src="" alt="" class="img-central div-centrado-hijo">
+        </div>
+
+        <div class="div-centrado-padre" style="width: 50%; height: 100vh;">
+            <div class="div-centrado-hijo">
+                <h1 id="nombre-propiedad" class="montserrat"></h1>
+                
+                <div style="display: flex;" class="contenedor-data-info">
+                    <div style="width: 50%;" class="data-info">
+                        <p><b> Barrio:</b> <span id="ubicacion-propiedad"></span></p>
+                        <p><b> Mt2:</b> <span id="mt2-propiedad"></span> m2 TOTALES</p>
+                    </div>
+
+                    <div style="width: 50%;">
+                        <p id="descripcion-propiedad"></p>
+                    </div>
+                </div>
+
+                
+                <iframe id="google-map" src="" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtener los valores de los parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombre = urlParams.get('nombre');
+            const ubicacion = urlParams.get('ubicacion');
+            const mt2 = urlParams.get('mt2');
+            const descripcion = urlParams.get('descripcion');
+            const id = urlParams.get('id');
+
+            // Insertar los valores en los elementos HTML correspondientes
+            document.getElementById('nombre-propiedad').textContent = nombre;
+            document.getElementById('ubicacion-propiedad').textContent = ubicacion;
+            document.getElementById('mt2-propiedad').textContent = mt2;
+            document.getElementById('descripcion-propiedad').textContent = descripcion;
+
+            const imagenSrc ='/assets/img/CasasVarias/Casa-' + id + '.jpg';
+
+            document.getElementById('imagen-propiedad').src = imagenSrc;
+
+            // Cargar el mapa de Google Maps con la dirección
+            const direccion = `${ubicacion}, Buenos Aires, Argentina`;
+            const googleMapURL = `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.972725539412!2d-58.45336198366701!3d-34.604333930055944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbe43fd266a9%3A0x22f8715d81c50857!2s${direccion}!5e0!3m2!1ses-419!2sar!4v1713652502347!5m2!1ses-419!2sar`;
+            document.getElementById('google-map').src = googleMapURL;
+        });
+    </script>
+    
+</body>
+</html>

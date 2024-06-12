@@ -75,23 +75,7 @@ a {
     background-color: gray;
 }
 
-.filterSearch-box {
-    border: gray 1px solid;
-    border-radius: 5px;
-    margin: 5%;
-    padding: 10px;
-    background-color: rgb(160, 160, 160);
-}
 
-.filterSearch-box select {
-    margin-right: 50px;
-}
-
-.filterSearch-box label {
-    display: inline;
-    margin-right: 7px;
-    margin-left: 1px;
-}
 
 .publicacion-contenedor {
 	display: grid;
