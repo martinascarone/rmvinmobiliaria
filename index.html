@@ -8,10 +8,10 @@
     <title>RMV</title>
 
     <!-- "Linkeamos" el html con el archivo css -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/layout/header.css">
-    <link rel="stylesheet" href="/assets/css/layout/banner.css">
-    <link rel="stylesheet" href="/assets/css/layout/destacadas.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/layout/header.css">
+    <link rel="stylesheet" href="./assets/css/layout/banner.css">
+    <link rel="stylesheet" href="./assets/css/layout/destacadas.css">
 
 
     <!-- "Linkeamos" el html con el archivo javascript -->
@@ -52,13 +52,32 @@
     <!-- MARK: Welcome Section => Martu
      -->
      <div class="banner-box"> 
-        <div class="banner-search-box">  
-            <form id="search-form" class="montserrat centrado" style="font-weight: 500;" >
+        <div class="banner-search-box"> 
+            <div class ="rent-buy-selector">
+                <input type="radio" id="rent" name="rent_buy" value="Alquilar" checked>
+                <label for="rent" class="option">Alquilar</label>
+
+                <input type="radio" id="buy" name="rent_buy" value="Comprar">
+                <label for="buy" class="option">Comprar</label>
+            </div>
+            
+            <form id="search-form" class="montserrat" style="font-weight: 600;" >
                                   
                     <label for="location">Locación</label>
-                    <input type="text" id="location" name="location" placeholder="Locación" />
-                    <label for="location">Tipo de propiedad</label>
-                    <input type="text" id="property-type" name="property-type" placeholder="Tipo de propiedad" />
+                    <select id="select-location" name="Locación">
+                        <option value="Nordelta">Nordelta</option>
+                        <option value="Palermo">Palermo</option>
+                        <option value="Recoleta">Recoleta</option>
+                        <option value="Miami">Miami</option>
+                    </select>
+                    <label for="propiedad">Tipo de propiedad</label>
+                    <select id="select-location" name="propiedad">
+                        <option value="Departamento">Departamento</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Casa">PH</option>
+                        <option value="Casa">Garage</option>
+                        <option value="Casa">P</option>
+                    </select>
 
                 <!-- boton de busqueda-->
                 <button id="button-search-filter" class="button-search">
@@ -96,8 +115,14 @@
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
-                        <p>Posted by RMV</p>
-                        <button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">USD</button>
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <!--<button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">USD</button>-->
                     </div>
 
                 </div>
@@ -125,8 +150,14 @@
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
-                        <p>Posted by RMV</p>
-                        <button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">2 Chelines</button>
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    <!--<button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">2 Chelines</button>-->
                     </div>
 
                 </div>
@@ -154,8 +185,15 @@
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
-                        <p>Posted by RMV</p>
-                        <button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">2 Chelines</button>
+                        
+                        <!--<button class="destacadas-propiedad-button" style="height: 60%; width: 50%; position: relative; left: 60%; top: 30%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">2 Chelines</button>-->
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
                     </div>
 
                 </div>
@@ -201,7 +239,7 @@
             <input type="checkbox" id="myCheck-06" onclick="myFunction('myCheck-06', '06')"><label for="myCheck-06">Propiedad 6</label>
         </div>
 
-        <div class="publicacion-contenedor">
+        <div class="publicacion-contenedor" >
 
             <div id="01" class="publicacion" style="background-image: url(./assets/img/CasasVarias/Casa-01.jpg);">
                 <div class="overlay">
