@@ -112,9 +112,9 @@
                     <h2 class="montserrat" style="flex-grow: 1;">La Mansion - Antezana 247</h2>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info">
-                        <p>6 cuartos</p>
+                        <p>6</p> <img id="bed-svg" src="assets/img/bed.svg" alt="">
                         <p>400Mt2</p>
-                        <p>3 baños</p>
+                        
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
@@ -147,9 +147,9 @@
                     <h2 class="montserrat" style="flex-grow: 1; color:#1F1F1F" >Casa Rosada</h2>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info">
-                        <p>34 cuartos</p>
+                        <p>34</p> <img id="bed-svg" src="assets/img/bed.svg" alt="">
                         <p>900Mt2</p>
-                        <p>Cerca del centro</p>
+                
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
@@ -182,9 +182,9 @@
                     <h2 class="montserrat" style="flex-grow: 1;">Lima 757</h2>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info">
-                        <p>5 piezas</p>
+                        <p>5</p> <img id="bed-svg" src="assets/img/bed.svg" alt="">
                         <p>80Mt2</p>
-                        <p>2 baños</p>
+
                     </div>
 
                     <div style="flex-grow: 1;" class="destacadas-propiedad-info-02">
@@ -234,7 +234,7 @@
                 <option value="casa">Casa</option>
                 <option value="departamento">Departamento</option>
                 <option value="garage">Garage</option>
-                <option value="varios">Varios</option>
+                
             </select>
 
             <label for="select-barrio">Elige el Barrio:</label>
@@ -327,15 +327,28 @@
         });
         //animación propiedades
         $('.destacadas-propiedad').hover(
-            function() {
-                $(this).find('div:first-child').css('transform', 'scale(1.1)')
-            },
-            function() { // función que se ejecuta cuando el cursor sale del elemento
-            $(this).find('div:first-child').css('transform', 'scale(1)');
-        }
-        );
-      });  
-
+                function() {
+                    $(this).find('div:first-child').css({
+                        'transform': 'scale(1.1)',
+                    });
+                    $(this).css({
+                        'backgroundColor': 'lightgray'
+                    }).animate({
+                        backgroundColor: 'lightgray'
+                    }, 1000);
+                },
+                function() { // Función que se ejecuta cuando el cursor sale del elemento
+                    $(this).find('div:first-child').css({
+                        'transform': 'scale(1)',
+                    });
+                    $(this).css({
+                        'backgroundColor': 'white'
+                    }).animate({
+                        backgroundColor: 'white'
+                    }, 1000);
+                }
+            );
+        });
     </script>
 </body>
 </html>

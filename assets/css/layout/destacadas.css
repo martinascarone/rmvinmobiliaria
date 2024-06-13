@@ -46,8 +46,8 @@
 
 .destacadas-propiedad-info {
     display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 25px;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
 }
 
 .destacadas-propiedad-info p {
@@ -114,4 +114,9 @@
 .rating .star:hover,
 .rating .star:hover ~ .star {
     color: #ffcc00;
+}
+
+#bed-svg{
+    width: 13%;
+    margin-left: -190px;
 }
