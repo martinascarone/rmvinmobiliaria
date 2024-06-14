@@ -22,3 +22,8 @@ function mostrarMenu(idMenu) {
       }
     
 }
+
+function buscarPrincipal() {
+  window.location.href = "./assets/subpages/propiedadesFiltro.html";
+  alert("Lo llevaremos a todas nuestra publicaciones")
+}
